@@ -497,7 +497,13 @@ def main():
             #     user_numeric     = user_numeric,
             #     top_k            = top_k
             # )
-
+            results = cosine_recommend(
+                user_ingredients = user_ingredients,
+                user_tags        = user_tags,
+                user_numeric     = user_numerics,
+                top_k            = top_k
+            )
+            print(results.to_string())
             # recommend_from_user_input(
             # user_ingredients=["chicken", "garlic", "olive oil"],
             # user_tags=["dinner", "quick"],
